@@ -1,0 +1,69 @@
+<h2>Cadastro de veiculos</h2>
+<hr>
+<form>
+    <div class="col-sm-4">
+        <label for="typeahead-prevent-manual-entry">Placa:</label><input type="text" class="form-control" name="placa"
+            [(ngModel)]="carro.placa " pattern="[A-Za-z]{3}" maxlength="7" required placeholder="EXEMPLO HHH-333"/>
+
+        <label for="typeahead-prevent-manual-entry">Chassi</label><input type="text" class="form-control" name="chassi"
+            [(ngModel)]="carro.chassi" required placeholder="16FF1S15DF55S4DRG5" maxlength="17"/>
+
+        <label for="typeahead-prevent-manual-entry">Renavam</label><input type="text" class="form-control"
+            name="renavam" [(ngModel)]="carro.renavam" required placeholder="00818111365" maxlength="11"/>
+
+        <label for="typeahead-prevent-manual-entry"> Modelo</label><input type="text" class="form-control" name="modelo"
+            [(ngModel)]="carro.modelo" required />
+
+        <label for="typeahead-prevent-manual-entry">Marca</label><input type="text" class="form-control" name="marca"
+            [(ngModel)]="carro.marca" required />
+        <label for="typeahead-prevent-manual-entry"> Ano</label><input type="text" class="form-control" name="ano"
+            [(ngModel)]="carro.ano" required maxlength="4" placeholder="Exemplo 1999"/>
+
+        <button type="button" (click)="Cadastrar()" class="btn btn-primary botaoPrincial">Cadastrar</button>
+    </div>
+</form>
+
+<table class="table table-striped  dados col-sm-4">
+
+
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Placa</th>
+            <th scope="col">Chassi</th>
+            <th scope="col">Renavam</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Ano</th>
+            <th scope="col">Ação</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let carro of carros">
+            <th scope="row">{{carro.id}}</th>
+            <th>{{carro.placa}}</th>
+            <th>{{carro.chassi}}</th>
+            <th>{{carro.renavam}}</th>
+            <th>{{carro.modelo}}</th>
+            <th>{{carro.marca}}</th>
+            <th>{{carro.ano}}</th>
+
+            <ng-template #tipContent>Preencha o formario para fazer a alteração</ng-template>
+            <th> <button type="button" class="btn btn-outline-info" [ngbTooltip]="tipContent"> Atualizar</button></th>
+            <th><button (click)="drop(carro.id)" class="btn btn-outline-danger">Remover</button></th>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+    (function () {
+
+
+
+    }());
+
+
+</SCRIPT>

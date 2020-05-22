@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Carros"
+    }
+  },
+  "defaultProject": "Carros",
+  "cli": {
+    "analytics": "00385060-c232-427c-9354-135bded6665e"
+  }
 }

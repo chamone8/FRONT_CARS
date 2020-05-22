@@ -1,0 +1,14 @@
+.dados{
+    position: absolute;
+    left: 700px;
+    top: 70px;
+    margin-top: 30px;
+    margin-left: 10px;
+    border: 2px solid black;
+}
+.botaoPrincial{
+    margin: 20px;
+}
+.container{
+    margin-top: 70px;
+}
